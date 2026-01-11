@@ -66,22 +66,18 @@ iframe:hover {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
-a {
-    color: #0078ff;
-    text-decoration: none;
-    font-size: 15px;
-    transition: color 0.3s ease;
-}
-
-a:hover {
-    color: #0056b3;
-    text-decoration: underline;
-}
-
 h3 {
     font-size: 1.25rem;
     font-weight: 600;
     color: #111;
     margin-top: 40px;
     margin-bottom: 10px;
+}
+
+.code-demo {
+  display: inline-block;
+  margin-bottom: 12px;
+  font-size: 14px;
+  color: #1e6fff;
+  text-decoration: none;
 }

@@ -1,0 +1,50 @@
+.container {
+    display: flex;
+    width: 400px;
+    height: 220px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.card {
+    flex: 1;
+    height: 100%;
+    cursor: pointer;
+    transform: flex .3s ease;
+}
+
+.card:hover {
+    flex: 3;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f1f1f1;
+    font-family: sans-serif;
+}
+
+.blue {
+    background: #6fb1ff;
+}
+
+.pink {
+    background: #ff6aa2;
+}
+
+.green {
+    background: #6ee7a8;
+}
+
+.purple {
+    background: #8b6cff;
+}
