@@ -1,0 +1,58 @@
+body {
+  background: #f2f2f2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.image-card {
+  position: relative;
+  width: 180px;
+  height: 260px;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.image-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+/* Overlay */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.overlay h3 {
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
+.overlay p {
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+/* Hover effect */
+.image-card:hover img {
+  transform: scale(1.1);
+}
+
+.image-card:hover .overlay {
+  opacity: 1;
+}
