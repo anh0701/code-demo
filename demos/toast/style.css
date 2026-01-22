@@ -1,0 +1,121 @@
+:root {
+  --success-color: #2ecc71;
+  --error-color: #e74c3c;
+  --warning-color: #f1c40f;
+  --info-color: #3498db;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f6fa;
+  padding: 40px;
+}
+
+.buttons button {
+  margin-right: 8px;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 8px;
+}
+
+#toast-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 9999;
+}
+
+.toast {
+  min-width: 280px;
+  background: #fff;
+  border-radius: 6px;
+  padding: 12px 14px 18px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, .15);
+  animation: slideIn .3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.toast h4 {
+  margin: 0;
+  font-size: 14px;
+}
+
+.toast p {
+  margin: 4px 0 0;
+  font-size: 13px;
+  color: #555;
+}
+
+.progress-track {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  width: 100%;
+  background: rgba(0, 0, 0, .05);
+}
+
+.progress-bar {
+  height: 100%;
+  width: 100%;
+  animation: progress linear forwards;
+}
+
+.toast.success .progress-bar {
+  background: var(--success-color);
+}
+
+.toast.error .progress-bar {
+  background: var(--error-color);
+}
+
+.toast.warning .progress-bar {
+  background: var(--warning-color);
+}
+
+.toast.info .progress-bar {
+  background: var(--info-color);
+}
+
+.btn-success {
+  background: var(--success-color);
+}
+
+.btn-error {
+  background: var(--error-color);
+}
+
+.btn-warning {
+  background: var(--warning-color);
+}
+
+.btn-info {
+  background: var(--info-color);
+}
+
+/* animation */
+@keyframes slideIn {
+  from {
+    transform: translateX(120%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes progress {
+  from {
+    width: 100%;
+  }
+
+  to {
+    width: 0%;
+  }
+}

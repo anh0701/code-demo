@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="buttons">
+        <button class="btn-success" onclick="showToast('success','Success','Saved successfully!')">Success</button>
+        <button class="btn-error" onclick="showToast('error','Error','Failed to connect to server')">Error</button>
+        <button class="btn-warning" onclick="showToast('warning','Warning','Low disk space')">Warning</button>
+        <button class="btn-info" onclick="showToast('info','Info','New update available')">Info</button>
+    </div>
+
+    <div id="toast-container"></div>
+    <script src="script.js"></script>
+</body>
+
+</html>
