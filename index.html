@@ -6,98 +6,230 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Demo List</title>
   <link rel="stylesheet" href="style.css">
+
+  <!-- Syntax highlighting -->
+  <!-- <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/github.min.css">
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js">
+  </script> -->
 </head>
 
 <body>
-  <h1>Demo list</h1>
+  <header class="page-header">
+    <h1>Demo List</h1>
+    <p>Explore interactive UI effects and animations.</p>
+  </header>
 
-  <div class="container">
+  <main class="container">
 
-    <div>
+    <!-- 1. Button Hover -->
+    <section class="demo-card">
       <h3>1. Demo Button Hover</h3>
-      <div>
-        <a class="code-demo" href="https://github.com/anh0701/code-demo/tree/main/demos/button" target="_blank" rel="noopener noreferrer">Code demo</a>
+
+      <div class="demo-list">
+
+        <div class="demo-item">
+          <div class="demo-preview">
+            <iframe src="demos/button/index.html"></iframe>
+          </div>
+          <div class="demo-actions">
+            <button class="code-demo" data-demo="demos/button">
+              &lt;/&gt; View Code
+            </button>
+          </div>
+        </div>
+
+        <div class="demo-item">
+          <div class="demo-preview">
+            <iframe src="demos/button-1/index.html"></iframe>
+          </div>
+          <div class="demo-actions">
+            <button class="code-demo" data-demo="demos/button-1">
+              &lt;/&gt; View Code
+            </button>
+          </div>
+        </div>
+
+        <div class="demo-item">
+          <div class="demo-preview">
+            <iframe src="demos/button-2/index.html"></iframe>
+          </div>
+          <div class="demo-actions">
+            <button class="code-demo" data-demo="demos/button-2">
+              &lt;/&gt; View Code
+            </button>
+          </div>
+        </div>
+
       </div>
-      <iframe src="demos/button/index.html" frameborder="0"></iframe>
-      
-      <div>
-        <a class="code-demo" href="https://github.com/anh0701/code-demo/tree/main/demos/button-1" target="_blank" rel="noopener noreferrer">Code demo</a>
-      </div>
-      <iframe src="demos/button-1/index.html" frameborder="0"></iframe>
-  
-      <div>
-        <a class="code-demo" href="https://github.com/anh0701/code-demo/tree/main/demos/button-2" target="_blank" rel="noopener noreferrer">Code demo</a>
-      </div>
-      <iframe src="demos/button-2/index.html" frameborder="0"></iframe>
-    </div>
-    
-    <div>
+    </section>
+
+    <!-- 2. Confetti -->
+    <section class="demo-card">
       <h3>2. Confetti</h3>
-      <div>
-        <a class="code-demo" href="https://www.kirilv.com/canvas-confetti/" target="_blank" rel="noopener noreferrer">Canvas Confetti, </a>
-        <a class="code-demo" href="https://github.com/anh0701/code-demo/tree/main/demos/confetti" target="_blank" rel="noopener noreferrer">Code demo</a>
+
+      <div class="demo-links">
+        <a href="https://www.kirilv.com/canvas-confetti/" target="_blank" rel="noopener noreferrer">
+          Canvas Confetti ↗
+        </a>
       </div>
-      <iframe src="demos/confetti/index.html" frameborder="0"></iframe>
-    </div>
-  
-    <div>
-      <h3>3. Shine image hover</h3>
-      <div>
-        <a class="code-demo" href="https://github.com/anh0701/code-demo/tree/main/demos/shine-image-hover" target="_blank" rel="noopener noreferrer">Code demo</a>
+
+      <div class="demo-preview">
+        <iframe src="demos/confetti/index.html" title="Confetti Demo"></iframe>
       </div>
-      <iframe src="demos/shine-image-hover/index.html" frameborder="0"></iframe>
-    </div>
-  
-    <div>
-      <h3>4. Flexbox hover effect</h3>
-      <div>
-        <a class="code-demo" href="https://github.com/anh0701/code-demo/tree/main/demos/flex-box" target="_blank" rel="noopener noreferrer">Code demo</a>
+
+      <div class="demo-actions">
+        <button class="code-demo" data-demo="demos/confetti">
+          <span> &lt;/&gt; </span> View Code
+        </button>
       </div>
-      <iframe src="demos/flex-box/index.html" frameborder="0"></iframe>
-    </div>
-  
-    <div>
-      <h3>5. Menu items hover effect</h3>
-      <div>
-        <a class="code-demo" href="https://github.com/anh0701/code-demo/tree/main/demos/menu-hover" target="_blank" rel="noopener noreferrer">Code demo</a>
+    </section>
+
+    <!-- 3. Shine Image Hover -->
+    <section class="demo-card">
+      <h3>3. Shine Image Hover</h3>
+
+      <div class="demo-preview">
+        <iframe src="demos/shine-image-hover/index.html" title="Shine Image Hover"></iframe>
       </div>
-      <iframe src="demos/menu-hover/index.html" frameborder="0"></iframe>
-    </div>
-  
-    <div>
-      <h3>6. Image overlay hover effect</h3>
-      <div>
-        <a class="code-demo" href="https://github.com/anh0701/code-demo/tree/main/demos/img-overlay" target="_blank" rel="noopener noreferrer">Code demo</a>
+
+      <div class="demo-actions">
+        <button class="code-demo" data-demo="demos/shine-image-hover">
+          <span> &lt;/&gt; </span> View Code
+        </button>
       </div>
-      <iframe src="demos/img-overlay/index.html" frameborder="0"></iframe>
-    </div>
-  
-    <div>
+    </section>
+
+    <!-- 4. Flexbox Hover -->
+    <section class="demo-card">
+      <h3>4. Flexbox Hover Effect</h3>
+
+      <div class="demo-preview">
+        <iframe src="demos/flex-box/index.html" title="Flexbox Hover"></iframe>
+      </div>
+
+      <div class="demo-actions">
+        <button class="code-demo" data-demo="demos/flex-box">
+          <span> &lt;/&gt; </span> View Code
+        </button>
+      </div>
+    </section>
+
+    <!-- 5. Menu Hover -->
+    <section class="demo-card">
+      <h3>5. Menu Items Hover Effect</h3>
+
+      <div class="demo-preview">
+        <iframe src="demos/menu-hover/index.html" title="Menu Hover"></iframe>
+      </div>
+
+      <div class="demo-actions">
+        <button class="code-demo" data-demo="demos/menu-hover">
+          <span> &lt;/&gt; </span> View Code
+        </button>
+      </div>
+    </section>
+
+    <!-- 6. Image Overlay -->
+    <section class="demo-card">
+      <h3>6. Image Overlay Hover Effect</h3>
+
+      <div class="demo-preview">
+        <iframe src="demos/img-overlay/index.html" title="Image Overlay"></iframe>
+      </div>
+
+      <div class="demo-actions">
+        <button class="code-demo" data-demo="demos/img-overlay">
+          <span> &lt;/&gt; </span> View Code
+        </button>
+      </div>
+    </section>
+
+    <!-- 7. Toast -->
+    <section class="demo-card">
       <h3>7. Toast</h3>
-      <div>
-        <a class="code-demo" href="https://github.com/anh0701/code-demo/tree/main/demos/toast" target="_blank" rel="noopener noreferrer">Code demo</a>
+
+      <div class="demo-preview">
+        <iframe src="demos/toast/index.html" title="Toast Demo"></iframe>
       </div>
-      <iframe src="demos/toast/index.html" frameborder="0"></iframe>
+
+      <div class="demo-actions">
+        <button class="code-demo" data-demo="demos/toast">
+          <span> &lt;/&gt; </span> View Code
+        </button>
+      </div>
+    </section>
+
+    <!-- 8. Infinite Scroll -->
+    <section class="demo-card">
+      <h3>8. Infinite Scroll</h3>
+
+      <div class="demo-preview">
+        <iframe src="demos/infinite-scroll/index.html" title="Infinite Scroll"></iframe>
+      </div>
+
+      <div class="demo-actions">
+        <button class="code-demo" data-demo="demos/infinite-scroll">
+          <span> &lt;/&gt; </span> View Code
+        </button>
+      </div>
+    </section>
+
+    <!-- 9. Smooth Scroll -->
+    <section class="demo-card">
+      <h3>9. Smooth Scroll on Menu</h3>
+
+      <div class="demo-preview">
+        <iframe src="demos/smooth-scroll/index.html" title="Smooth Scroll"></iframe>
+      </div>
+
+      <div class="demo-actions">
+        <button class="code-demo" data-demo="demos/smooth-scroll">
+          <span> &lt;/&gt; </span> View Code
+        </button>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Code Modal -->
+  <dialog id="code-modal" class="code-modal">
+
+    <div class="modal-header">
+      <div>
+        <h2 id="modal-title">Source Code</h2>
+        <p id="modal-path"></p>
+      </div>
+
+      <button id="close-modal" class="close-modal" aria-label="Close">
+        &times;
+      </button>
     </div>
 
-    <div>
-      <h3>8. infinte scroll</h3>
-      <div>
-        <a class="code-demo" href="https://github.com/anh0701/code-demo/tree/main/demos/infinite-scroll" target="_blank" rel="noopener noreferrer">Code demo</a>
-      </div>
-      <iframe src="demos/infinite-scroll/index.html" frameborder="0"></iframe>
-    </div>
-    
-    <div>
-      <h3>9. smooth scroll on menu</h3>
-      <div>
-        <a class="code-demo" href="https://github.com/anh0701/code-demo/tree/main/demos/smooth-scroll" target="_blank" rel="noopener noreferrer">Code demo</a>
-      </div>
-      <iframe src="demos/smooth-scroll/index.html" frameborder="0"></iframe>
-    </div>
-  
-  </div>
+    <div class="modal-toolbar">
 
+      <div class="code-tabs">
+        <button class="tab active" data-file="html">HTML</button>
+        <button class="tab" data-file="css">CSS</button>
+        <button class="tab" data-file="js">JavaScript</button>
+      </div>
+
+      <button id="copy-code" class="copy-button">
+        Copy Code
+      </button>
+
+    </div>
+
+    <div class="code-content">
+      <div id="loading" class="loading">Loading source code...</div>
+
+      <pre id="code-container" hidden><code id="code-display"></code></pre>
+    </div>
+
+  </dialog>
+
+  <script src="script.js"></script>
 </body>
 
 </html>
