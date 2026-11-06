@@ -1,3 +1,52 @@
+const demoContainer = document.getElementById("demo-container");
+
+/* Render Demo Cards*/
+
+
+function renderDemos() {
+    demoContainer.innerHTML = demos.map(demo => `
+        <section class="demo-card">
+
+            <div class="demo-card-header">
+                <span class="demo-category">
+                    ${demo.category}
+                </span>
+
+                <h3>${demo.title}</h3>
+            </div>
+
+            ${demo.link ? `
+                <div class="demo-links">
+                    <a href="${demo.link}"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        External Resource ↗
+                    </a>
+                </div>
+            ` : ""}
+
+            <div class="demo-preview">
+                <iframe
+                    src="${demo.path}/index.html"
+                    title="${demo.title}"
+                    loading="lazy">
+                </iframe>
+            </div>
+
+            <div class="demo-actions">
+                <button
+                    class="code-demo"
+                    data-demo="${demo.path}"
+                    data-title="${demo.title}">
+                    &lt;/&gt; View Code
+                </button>
+            </div>
+
+        </section>
+    `).join("");
+}
+
+renderDemos();
 
 const modal = document.getElementById("code-modal");
 const modalTitle = document.getElementById("modal-title");
@@ -39,20 +88,20 @@ const codeCache = new Map();
    Open Modal
 ========================= */
 
-document.querySelectorAll(".code-demo").forEach(button => {
-    button.addEventListener("click", async () => {
-        currentDemo = button.dataset.demo;
-        currentFile = "html";
+document.addEventListener("click", async event => {
+    const button = event.target.closest(".code-demo");
 
-        modalTitle.textContent =
-            button.closest(".demo-card").querySelector("h3").textContent;
+    if (!button) return;
 
-        modalPath.textContent = currentDemo;
+    currentDemo = button.dataset.demo;
+    currentFile = "html";
 
-        modal.showModal();
+    modalTitle.textContent = button.dataset.title;
+    modalPath.textContent = currentDemo;
 
-        await loadCode(currentFile);
-    });
+    modal.showModal();
+
+    await loadCode(currentFile);
 });
 
 /* =========================
