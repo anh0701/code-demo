@@ -1,0 +1,54 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-slide-up {
+    position: relative;
+    min-width: 160px;
+    padding: 0;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.btn-slide-up span {
+    position: relative;
+    z-index: 2;
+    display: block;
+    padding: 15px 25px;
+    color: #1c1f1e;
+    border: 1px solid #1c1f1e;
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: color 0.3s;
+}
+
+.btn-slide-up::before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 0;
+    background: #1c1f1e;
+    transition: all 0.35s ease;
+}
+
+.btn-slide-up:hover::before {
+    height: 100%;
+}
+
+.btn-slide-up:hover span {
+    color: #fff;
+}

@@ -1,23 +1,29 @@
-.container {
-    display: flex;
-    gap: 3px;
-    margin-left: 2%;
-    flex-wrap: revert;
-    width: 50%;
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+    margin: 0;
 }
 
 body {
-    padding: 0;
     background-color: #FCFCFC;
-    text-align: right;
 }
 
-a {
-    text-decoration: none;
+.demo-container {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .dedcription-btn {
-    width: 100%;
+    width: 300px;
     position: relative;
     display: inline-block;
     border-radius: 30px;
@@ -25,29 +31,26 @@ a {
     color: #ffa000;
     text-align: center;
     font-size: 18px;
-    padding: 9px 0;
+    padding: 9px 40px 9px 0;
     transition: all 0.3s;
-    padding-right: 40px;
-    margin: 20px 5px;
     box-shadow: 0 3px 20px 0 rgba(0, 0, 0, 0.06);
+    text-decoration: none;
+}
+
+.name-descripeion {
+    position: relative;
+    z-index: 2;
 }
 
 .dedcription-btn .btn-icon {
     background-color: #ffa000;
     width: 92px;
     height: 45px;
-    float: right;
     position: absolute;
     border-radius: 30px 30px 30px 0;
-    ;
-    right: 0px;
-    top: 0px;
+    right: 0;
+    top: 0;
     transition: all 0.3s;
-}
-
-.name-descripeion {
-    position: relative;
-    z-index: 9999;
 }
 
 .btn-icon::after {
@@ -57,8 +60,8 @@ a {
     border-top: 45px solid #fcfcfc;
     border-right: 40px solid transparent;
     position: absolute;
-    top: 0px;
-    left: 0px;
+    top: 0;
+    left: 0;
 }
 
 .dedcription-btn:hover .btn-icon {
@@ -68,7 +71,6 @@ a {
 
 .dedcription-btn:hover .btn-icon::after {
     display: none;
-    opacity: 0.1;
 }
 
 .btn-icon i {
@@ -79,13 +81,5 @@ a {
 }
 
 .dedcription-btn:hover {
-    color: #fff !important;
-}
-
-.hover-box {
-    display: flex;
-    width: 100%;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
+    color: #fff;
 }
