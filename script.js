@@ -2,10 +2,9 @@ const demoContainer = document.getElementById("demo-container");
 
 /* Render Demo Cards*/
 
-
 function renderDemos() {
     demoContainer.innerHTML = demos.map(demo => `
-        <section class="demo-card">
+        <section class="demo-card" data-id="${demo.id || demo.path}">
 
             <div class="demo-card-header">
                 <span class="demo-category">

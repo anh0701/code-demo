@@ -365,6 +365,172 @@ iframe {
 }
 
 /* =========================
+   Search & Filter
+========================= */
+
+.demo-toolbar {
+    margin-bottom: 30px;
+}
+
+/* Search Box */
+
+.search-box {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    width: 100%;
+    max-width: 500px;
+    height: 48px;
+
+    padding: 0 15px;
+
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.search-box:focus-within {
+    border-color: #555;
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.06);
+}
+
+.search-box > i {
+    color: #888;
+}
+
+.search-box input {
+    flex: 1;
+    min-width: 0;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+
+    font-size: 15px;
+    color: #222;
+}
+
+.search-box input::placeholder {
+    color: #aaa;
+}
+
+#clear-search {
+    display: none;
+
+    border: none;
+    background: transparent;
+
+    color: #888;
+    font-size: 16px;
+
+    cursor: pointer;
+}
+
+#clear-search.visible {
+    display: block;
+}
+
+#clear-search:hover {
+    color: #222;
+}
+
+/* Category Filters */
+
+.category-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    margin-top: 20px;
+}
+
+.category-btn {
+    padding: 8px 15px;
+
+    border: 1px solid #ddd;
+    border-radius: 20px;
+
+    background: #fff;
+    color: #555;
+
+    font-size: 13px;
+    cursor: pointer;
+
+    transition: all 0.2s;
+}
+
+.category-btn:hover {
+    border-color: #555;
+    color: #222;
+}
+
+.category-btn.active {
+    background: #222;
+    border-color: #222;
+    color: #fff;
+}
+
+/* Result Count */
+
+.result-count {
+    margin: 15px 0 0;
+
+    font-size: 13px;
+    color: #888;
+}
+
+/* Empty State */
+
+.empty-state {
+    padding: 60px 20px;
+    text-align: center;
+    color: #888;
+}
+
+.empty-state > i {
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.empty-state h3 {
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.empty-state p {
+    font-size: 14px;
+}
+
+.empty-state[hidden] {
+    display: none;
+}
+
+/* Responsive */
+
+@media (max-width: 600px) {
+    .search-box {
+        max-width: 100%;
+    }
+
+    .category-filters {
+        gap: 8px;
+    }
+
+    .category-btn {
+        padding: 7px 12px;
+        font-size: 12px;
+    }
+}
+
+.demo-card[hidden] {
+    display: none !important;
+}
+
+/* =========================
    Responsive
 ========================= */
 
