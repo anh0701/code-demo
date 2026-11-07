@@ -1,0 +1,52 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.press-3d {
+  padding: 14px 34px;
+  border: 0;
+  border-radius: 10px;
+  background: #f59e0b;
+  color: #422006;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+
+  box-shadow:
+    0 6px 0 #b45309,
+    0 9px 15px rgba(0,0,0,.25);
+
+  transition:
+    transform .15s ease,
+    box-shadow .15s ease;
+}
+
+.press-3d:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 9px 0 #b45309,
+    0 13px 18px rgba(0,0,0,.25);
+}
+
+.press-3d:active {
+  transform: translateY(5px);
+
+  box-shadow:
+    0 1px 0 #b45309,
+    0 3px 6px rgba(0,0,0,.2);
+}
+
+.press-3d:focus-visible {
+  outline: 2px solid #fcd34d;
+  outline-offset: 5px;
+}

@@ -1,0 +1,47 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.elastic-btn {
+  padding: 14px 34px;
+  border: none;
+  border-radius: 12px;
+  background: #8b5cf6;
+  color: white;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+
+  transition:
+    transform .45s cubic-bezier(.34, 1.56, .64, 1),
+    box-shadow .3s ease;
+}
+
+.elastic-btn:hover {
+  transform: scale(1.12, 1.06);
+  box-shadow: 0 8px 24px #8b5cf655;
+}
+
+.elastic-btn:active {
+  transform: scale(.94);
+}
+
+.elastic-btn:focus-visible {
+  outline: 2px solid #c4b5fd;
+  outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .elastic-btn {
+    transition: none;
+  }
+}

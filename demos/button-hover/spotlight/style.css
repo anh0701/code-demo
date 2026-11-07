@@ -1,0 +1,55 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.spotlight-btn {
+  --x: 50%;
+  --y: 50%;
+
+  position: relative;
+  overflow: hidden;
+
+  padding: 16px 36px;
+  border: 1px solid #475569;
+  border-radius: 12px;
+
+  background:
+    radial-gradient(
+      140px circle at var(--x) var(--y),
+      #818cf866,
+      transparent 70%
+    ),
+    #1e293b;
+
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+
+  transition:
+    border-color .25s ease,
+    transform .25s ease;
+}
+
+.spotlight-btn:hover {
+  border-color: #818cf8;
+  transform: translateY(-2px);
+}
+
+.spotlight-btn:active {
+  transform: scale(.97);
+}
+
+.spotlight-btn:focus-visible {
+  outline: 2px solid #a5b4fc;
+  outline-offset: 4px;
+}
