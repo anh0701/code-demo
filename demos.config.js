@@ -1,243 +1,30 @@
+import buttonBackgroundDemos from "./config/buttons-background.config.js";
+import buttonBorderDemos from "./config/buttons-border.config.js";
+import buttonTextDemos from "./config/buttons-text.config.js";
+import buttonIconDemos from "./config/buttons-icon.config.js";
+import buttonEffectsDemos from "./config/buttons-effects.config.js";
+
+import inputDemos from "./config/inputs.config.js";
+import imageDemos from "./config/images.config.js";
+import animationDemos from "./config/animations.config.js";
+import navigationDemos from "./config/navigation.config.js";
+import scrollingDemos from "./config/scrolling.config.js";
+import componentDemos from "./config/components.config.js";
+import layoutEffect from "./config/layout-effects.config.js";
+
 const demos = [
-    {
-        id: "slide-down",
-        title: "Slide Down",
-        category: "Button Background",
-        description: "Button background slides down on hover.",
-        keywords: ["slide", "down", "button", "hover", "transition"],
-        path: "demos/button-background/slide-down"
-    },
-    {
-        id: "slide-left",
-        title: "Slide Left",
-        category: "Button Background",
-        description: "Button background slides from right to left.",
-        keywords: ["slide", "left", "button", "hover", "transition"],
-        path: "demos/button-background/slide-left"
-    },
-    {
-        id: "shine-image-hover",
-        title: "Shine Image Hover",
-        category: "Image Effects",
-        description: "Shining light effect when hovering over an image.",
-        keywords: ["shine", "image", "light", "hover", "overlay"],
-        path: "demos/image-effects/shine-image-hover"
-    },
-    {
-        id: "slide-right",
-        title: "Slide Right",
-        category: "Button Background",
-        description: "Button background slides from left to right.",
-        keywords: ["slide", "right", "button", "hover", "transition"],
-        path: "demos/button-background/slide-right"
-    },
-    {
-        id: "opacity",
-        title: "Opacity",
-        category: "Button Background",
-        description: "Button opacity changes on hover.",
-        keywords: ["opacity", "fade", "transparent", "button", "hover"],
-        path: "demos/button-background/opacity"
-    },
-    {
-        id: "border-1",
-        title: "Border 1",
-        category: "Button Border",
-        description: "Animated border effect on button hover.",
-        keywords: ["border", "outline", "button", "hover"],
-        path: "demos/button-border/border-1"
-    },
-    {
-        id: "border-2",
-        title: "Border 2",
-        category: "Button Border",
-        description: "Animated border effect on button hover.",
-        keywords: ["border", "outline", "button", "hover"],
-        path: "demos/button-border/border-2"
-    },
-    {
-        id: "border-3",
-        title: "Border 3",
-        category: "Button Border",
-        description: "Animated border effect on button hover.",
-        keywords: ["border", "outline", "button", "hover"],
-        path: "demos/button-border/border-3"
-    },
-    {
-        id: "border-4",
-        title: "Border 4",
-        category: "Button Border",
-        description: "Animated border effect on button hover.",
-        keywords: ["border", "outline", "button", "hover"],
-        path: "demos/button-border/border-4"
-    },
-    {
-        id: "border-5",
-        title: "Border 5",
-        category: "Button Border",
-        description: "Animated border effect on button hover.",
-        keywords: ["border", "outline", "button", "hover"],
-        path: "demos/button-border/border-5"
-    },
-    {
-        id: "text-rolling",
-        title: "Text Rolling",
-        category: "Button Text",
-        description: "Text rolling animation when hovering over a button.",
-        keywords: ["text", "rolling", "animation", "button", "hover"],
-        path: "demos/button-text/text-rolling"
-    },
-    {
-        id: "expanding-icon",
-        title: "Expanding Icon Button",
-        category: "Button Icon",
-        description: "Button expands to reveal an icon.",
-        keywords: ["expanding", "icon", "button", "animation", "hover"],
-        path: "demos/button-icon/expanding-icon"
-    },
-    {
-        id: "confetti",
-        title: "Confetti",
-        category: "Animations",
-        description: "Confetti particle animation effect.",
-        keywords: ["confetti", "particles", "celebration", "animation"],
-        path: "demos/animations/confetti",
-        link: "https://www.kirilv.com/canvas-confetti/"
-    },
-    {
-        id: "image-overlay",
-        title: "Image Overlay",
-        category: "Image Effects",
-        description: "Overlay effect displayed over an image.",
-        keywords: ["image", "overlay", "hover", "layer"],
-        path: "demos/image-effects/img-overlay"
-    },
-    {
-        id: "flexbox-hover",
-        title: "Flexbox Hover Effect",
-        category: "Layout Effects",
-        description: "Interactive layout effect using CSS Flexbox.",
-        keywords: ["flexbox", "layout", "hover", "expand", "resize"],
-        path: "demos/layout-effects/flex-box"
-    },
-    {
-        id: "menu-hover",
-        title: "Menu Hover",
-        category: "Navigation",
-        description: "Interactive navigation menu hover effect.",
-        keywords: ["menu", "navigation", "navbar", "hover"],
-        path: "demos/navigation/menu-hover"
-    },
-    {
-        id: "toast",
-        title: "Toast",
-        category: "UI Components",
-        description: "Toast notification component.",
-        keywords: ["toast", "notification", "alert", "message", "popup"],
-        path: "demos/ui-components/toast"
-    },
-    {
-        id: "infinite-scroll",
-        title: "Infinite Scroll",
-        category: "Scrolling Effects",
-        description: "Automatically loads more content while scrolling.",
-        keywords: ["infinite", "scroll", "loading", "pagination"],
-        path: "demos/scrolling-effects/infinite-scroll"
-    },
-    {
-        id: "smooth-scroll",
-        title: "Smooth Scroll",
-        category: "Scrolling Effects",
-        description: "Smooth scrolling animation between page sections.",
-        keywords: ["smooth", "scroll", "animation", "navigation"],
-        path: "demos/scrolling-effects/smooth-scroll"
-    },
-    {
-        id: "slide-up",
-        title: "Slide Up",
-        category: "Button Background",
-        description: "Button background slides up on hover.",
-        keywords: ["slide", "up", "button", "hover", "transition"],
-        path: "demos/button-background/slide-up"
-    },
-    {
-        id: "neon-glow",
-        title: "Neon Glow",
-        category: "Button Glow",
-        description: "Button emits a neon glow effect on hover.",
-        keywords: ["neon", "glow", "light", "button", "hover"],
-        path: "demos/button-glow/neon-glow"
-    },
-    {
-        id: "ripple",
-        title: "Ripple Effect",
-        category: "Button Click",
-        description: "Expanding ripple animation when clicking a button.",
-        keywords: ["ripple", "click", "wave", "button"],
-        path: "demos/button-click/ripple"
-    },
-    {
-        id: "3d-press",
-        title: "3D Press",
-        category: "Button 3D",
-        description: "Button presses down with a realistic 3D effect.",
-        keywords: ["3d", "press", "depth", "click"],
-        path: "demos/button-3d/3d-press"
-    },
-    {
-        id: "gradient-shift",
-        title: "Gradient Shift",
-        category: "Button Background",
-        description: "Button gradient smoothly changes on hover.",
-        keywords: ["gradient", "color", "shift", "hover"],
-        path: "demos/button-background/gradient-shift"
-    },
-    {
-        id: "rotating-border",
-        title: "Rotating Border",
-        category: "Button Border",
-        description: "Animated gradient border rotates around the button.",
-        keywords: ["rotating", "border", "gradient", "animation"],
-        path: "demos/button-border/rotating-border"
-    },
-    {
-        id: "bounce",
-        title: "Bounce",
-        category: "Button Animation",
-        description: "Button bounces playfully when hovered.",
-        keywords: ["bounce", "spring", "button", "hover"],
-        path: "demos/button-animation/bounce"
-    },
-    {
-        id: "wobble",
-        title: "Wobble",
-        category: "Button Animation",
-        description: "Button shakes with a playful wobble animation.",
-        keywords: ["wobble", "shake", "motion", "hover"],
-        path: "demos/button-animation/wobble"
-    },
-    {
-        id: "spotlight",
-        title: "Spotlight",
-        category: "Button Glow",
-        description: "A spotlight follows the cursor over the button.",
-        keywords: ["spotlight", "light", "cursor", "hover"],
-        path: "demos/button-glow/spotlight"
-    },
-    {
-        id: "elastic",
-        title: "Elastic",
-        category: "Button Animation",
-        description: "Button stretches and bounces with an elastic effect.",
-        keywords: ["elastic", "stretch", "spring", "hover"],
-        path: "demos/button-animation/elastic"
-    },
-    {
-        id: "circle-reveal",
-        title: "Circle Reveal",
-        category: "Button Background",
-        description: "Circular background expands to reveal a new color.",
-        keywords: ["circle", "reveal", "radial", "hover"],
-        path: "demos/button-background/circle-reveal"
-    }
+    ...buttonBackgroundDemos,
+    ...buttonBorderDemos,
+    ...buttonTextDemos,
+    ...buttonIconDemos,
+    ...buttonEffectsDemos,
+    ...inputDemos,
+    ...imageDemos,
+    ...animationDemos,
+    ...navigationDemos,
+    ...scrollingDemos,
+    ...componentDemos,
+    ...layoutEffect,
 ];
+
+export default demos;

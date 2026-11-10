@@ -1,6 +1,8 @@
+import demos from "./demos.config.js";
+
 const demoContainer = document.getElementById("demo-container");
 
-/* Render Demo Cards*/
+/* Render Demo Cards */
 
 function renderDemos() {
     demoContainer.innerHTML = demos.map(demo => `
@@ -47,6 +49,8 @@ function renderDemos() {
 
 renderDemos();
 
+/* Modal Elements */
+
 const modal = document.getElementById("code-modal");
 const modalTitle = document.getElementById("modal-title");
 const modalPath = document.getElementById("modal-path");
@@ -60,7 +64,8 @@ const loading = document.getElementById("loading");
 
 const tabs = document.querySelectorAll(".tab");
 
-// Các file source của demo hiện tại
+/* File Types */
+
 const fileTypes = {
     html: {
         name: "index.html",
@@ -80,7 +85,7 @@ let currentDemo = "";
 let currentFile = "html";
 let currentCode = "";
 
-// Cache code đã tải để không phải fetch lại
+// Cache code đã tải
 const codeCache = new Map();
 
 /* =========================
@@ -154,7 +159,7 @@ async function loadCode(fileType) {
 
         // Highlight syntax
         if (window.hljs) {
-            hljs.highlightElement(codeDisplay);
+            window.hljs.highlightElement(codeDisplay);
         }
 
     } catch (error) {
@@ -238,3 +243,5 @@ modal.addEventListener("click", event => {
 modal.addEventListener("close", () => {
     copyButton.textContent = "Copy Code";
 });
+
+export { demos, renderDemos };

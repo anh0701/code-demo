@@ -1,3 +1,4 @@
+import demos from "./demos.config.js";
 
 document.addEventListener("DOMContentLoaded", () => {
     const searchInput = document.getElementById("demo-search");
