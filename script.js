@@ -144,6 +144,14 @@ async function loadCode(fileType) {
 
             code = await response.text();
 
+            // Nếu là file HTML thì chỉ lấy nội dung body
+            if (fileType === "html") {
+                const parser = new DOMParser();
+                const doc = parser.parseFromString(code, "text/html");
+
+                code = doc.body.innerHTML.trim();
+            }
+
             codeCache.set(filePath, code);
         }
 
