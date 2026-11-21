@@ -24,6 +24,14 @@ const demos = [
         path: "demos/button-click/ripple"
     },
     {
+        id: "3d-shine-effect",
+        title: "3D Shine Effect",
+        category: "Button 3D",
+        description: "Button presses down with a realistic 3D effect.",
+        keywords: ["3d", "press", "depth", "click"],
+        path: "demos/button-3d/3d-shine-effect"
+    },
+    {
         id: "3d-press",
         title: "3D Press",
         category: "Button 3D",
